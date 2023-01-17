@@ -42,8 +42,12 @@ class TestRoomApplicationTests {
   @Test
   void testList() {
     var lst = List.of("doca", "boca", "joca");
-    var actual = lst.stream().filter(n->n.startsWith("d")).collect(Collectors.toList());
+    var actual = lst.stream().filter(n->n.startsWith("b")).collect(Collectors.toList());
     var expected = List.of("boca");
+
+    System.err.println ("проверка какой-то ошибки");
+
+
 
     System.out.println("actual: " + actual);
     System.out.println("expected: " + expected);
