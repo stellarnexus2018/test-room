@@ -73,4 +73,12 @@ class TestRoomApplicationTests {
 
     Assertions.assertEquals(rounded, BigDecimal.valueOf(124), "Фигня какая-то");
   }
+
+  @Test
+  void testContext() {
+    System.out.println("out");
+    System.err.println("err");
+
+    Assertions.assertEquals(true, true, "Фигня какая-то");
+  }
 }
