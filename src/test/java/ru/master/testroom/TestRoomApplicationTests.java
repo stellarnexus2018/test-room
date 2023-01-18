@@ -71,6 +71,6 @@ class TestRoomApplicationTests {
     System.out.println("ceil: " + ceil);
     System.out.println("ceilbd: " + ceilbd);
 
-    //Assertions.assertEquals(expected, actual, "Фигня какая-то");
+    Assertions.assertEquals(rounded, BigDecimal.valueOf(124), "Фигня какая-то");
   }
 }
