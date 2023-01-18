@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -47,11 +49,28 @@ class TestRoomApplicationTests {
 
     System.err.println ("проверка какой-то ошибки");
 
-
-
     System.out.println("actual: " + actual);
     System.out.println("expected: " + expected);
 
     Assertions.assertEquals(expected, actual, "Фигня какая-то");
+  }
+
+  @Test
+  void testBigDecimal() {
+    double d = 123.0001;
+    /*double d = 123.1111;*/
+    /*double d = 123.0000;*/
+
+    BigDecimal val = BigDecimal.valueOf(d);
+    BigDecimal rounded = val.setScale(0, RoundingMode.CEILING);
+    double ceil = Math.ceil(d);
+    double ceilbd = Math.ceil(val.doubleValue());
+
+    System.out.println("val: " + val);
+    System.out.println("rounded: " + rounded);
+    System.out.println("ceil: " + ceil);
+    System.out.println("ceilbd: " + ceilbd);
+
+    //Assertions.assertEquals(expected, actual, "Фигня какая-то");
   }
 }
