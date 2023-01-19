@@ -15,6 +15,5 @@ class StringRoomServiceImplTest {
   @Test
   void enrollOne() {
     stringRoomService.enrollOne();
-
   }
 }

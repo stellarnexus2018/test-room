@@ -10,9 +10,9 @@ public class StringRoomServiceImpl implements StringRoomService {
   @Override
   public void enrollOne() {
     StringBuffer sbuff = new StringBuffer();
-    sbuff.append("Игорь\n\r");
-    sbuff.append("Игоряша\n\r");
-    sbuff.append("Игорямба\n\r");
+    sbuff.append("Игорь");
+    sbuff.append("Игоряша");
+    sbuff.append("Игорямба");
 
     log.info("sbuff: {}", sbuff);
   }
